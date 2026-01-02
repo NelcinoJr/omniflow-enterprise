@@ -1,0 +1,23 @@
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Dependencies (Already ignored in subfolders, but good to have)
+node_modules/
+vendor/
+
+# Envs
+.env
+.env.*
+
+# Logs
+*.log
+docker-compose.override.yml
