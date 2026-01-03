@@ -10,14 +10,33 @@
 Thumbs.db
 Desktop.ini
 
-# Dependencies (Already ignored in subfolders, but good to have)
+# Dependencies
 node_modules/
 vendor/
+
+# Build artifacts
+dist/
+build/
+.next/
+.serverless/
+out/
 
 # Envs
 .env
 .env.*
+!.env.example
 
 # Logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker
 docker-compose.override.yml
+
+# Tools
+guia_frontend_vue.md
+implementation_plan.md
+task.md
+passo_a_passo_tecnico.md
