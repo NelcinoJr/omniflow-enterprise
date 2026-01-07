@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Query } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -10,9 +10,13 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  // Novo endpoint para o Painel Admin em Angular
   @Get('logs')
   async getLogs() {
     return this.appService.getAuditLogs();
+  }
+
+  @Get('chat/history')
+  async getHistory(@Query('user1') u1: string, @Query('user2') u2: string) {
+    return this.appService.getChatHistory(u1, u2);
   }
 }

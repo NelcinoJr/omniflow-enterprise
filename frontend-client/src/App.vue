@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import axios from 'axios'
 import { Rocket, CheckCircle, Loader2, Server, Database, MessageSquare } from 'lucide-vue-next'
+import ChatComponent from './components/ChatComponent.vue'
 
 const loading = ref(false)
 const lastJob = ref(null)
@@ -39,7 +40,7 @@ const triggerJob = async () => {
     </div>
   </header>
 
-  <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <main class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
     <!-- Card de Disparo -->
     <section class="glass-card">
       <div class="flex items-center gap-3 mb-6">
@@ -88,7 +89,12 @@ const triggerJob = async () => {
     </section>
   </main>
 
-  <footer class="mt-12 text-center text-slate-500 text-sm">
+  <!-- Área de Evolução: Chat -->
+  <section class="grid grid-cols-1 gap-8">
+    <ChatComponent />
+  </section>
+
+  <footer class="mt-12 text-center text-slate-500 text-sm pb-8">
     OmniFlow Enterprise &copy; 2026 - Sistema de Mensageria Distribuída
   </footer>
 </template>
